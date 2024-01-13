@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import Customer from "./screens/Customer.jsx";
-import Invite from "./screens/Invite.jsx";
+import CreateClubScreen from "./screens/CreateClubScreen.jsx";
+import CreateClubNameScreen from "./screens/CreateClubNameScreen.jsx";
 
 function App() {
   const [textInputValue, setTextInputValue] = useState("");
@@ -19,21 +19,21 @@ function App() {
 
   const navigateToInviteScreen = () => {
     setScreen(
-      screen === "customer-screen" ? "invite-screen" : "customer-screen",
+      screen === "customer-screen" ? "invite-screen" : "customer-screen"
     );
   };
 
   return (
     <div>
       {screen === "customer-screen" ? (
-        <Customer
+        <CreateClubScreen
           textInputValue={textInputValue}
           setTextInputValue={setTextInputValue}
           handleNavigate={navigateToInviteScreen}
           handleTextInputChange={handleTextInputChange}
         />
       ) : (
-        <Invite
+        <CreateClubNameScreen
           textInputValue={textInputValue}
           handleDropdownChange={handleDropdownChange}
         />

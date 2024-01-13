@@ -12,7 +12,7 @@ const TextInput = ({ label, value, onChange, required, style }) => {
     setIsFocused(false);
   };
 
-  const labelClass = value ? "label--small" : "";
+  const labelClass = isFocused || value ? "label--small" : "";
 
   return (
     <>
@@ -28,16 +28,7 @@ const TextInput = ({ label, value, onChange, required, style }) => {
             onFocus={handleFocus}
             style={style}
           />
-          <label
-            // style={{
-            //   top: value ? "-20px" : "10%",
-            //   fontSize: value ? "12px" : "16px",
-            //   color: value ? "#007bff" : "",
-            // }}
-            className={`container__label ${labelClass}`}
-          >
-            {label}
-          </label>
+          <label className={`container__label ${labelClass}`}>{label}</label>
           <span className="container__input-highlight"></span>
         </div>
       </div>
