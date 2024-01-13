@@ -1,12 +1,12 @@
 import "./ChooseClubDropdown.css";
 
-const ChooseClubDropdown = ({ onChange, options }) => {
+const ChooseClubDropdown = ({ onChange, options, value }) => {
   return (
     <div>
       <select
         className="club-name"
         onChange={(e) => onChange(e.target.value)}
-        // onChange={onChange}
+        value={value}
       >
         <option disabled={true} value="">
           Choose club

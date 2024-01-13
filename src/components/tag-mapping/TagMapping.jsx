@@ -38,17 +38,6 @@ const TagMapping = () => {
       {!tagMappingOpen && (
         <div className="bottomContainer">
           <p>No Tags</p>
-          {/*<div className="middleSection">*/}
-          {/*  <div className="tag-inputs1">*/}
-          {/*    <p>Mac</p>*/}
-          {/*    <input />*/}
-          {/*  </div>*/}
-          {/*  <div className="tag-inputs2">*/}
-          {/*    <p>ID</p>*/}
-          {/*    <input />*/}
-          {/*    <p>X</p>*/}
-          {/*  </div>*/}
-          {/*</div>*/}
           <div className="middleSection">
             {[...Array(newInputDiv)].map((_, index) => (
               <InputDiv key={index} />

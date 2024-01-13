@@ -11,12 +11,6 @@ function App() {
     setTextInputValue(value);
   };
 
-  const handleDropdownChange = (value) => {
-    setTextInputValue(value);
-  };
-
-  console.log("APP COMPONENT:", textInputValue);
-
   const navigateToInviteScreen = () => {
     setScreen(
       screen === "customer-screen" ? "invite-screen" : "customer-screen"
@@ -33,10 +27,7 @@ function App() {
           handleTextInputChange={handleTextInputChange}
         />
       ) : (
-        <CreateClubNameScreen
-          textInputValue={textInputValue}
-          handleDropdownChange={handleDropdownChange}
-        />
+        <CreateClubNameScreen textInputValue={textInputValue} />
       )}
     </div>
   );

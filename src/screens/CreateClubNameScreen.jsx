@@ -8,7 +8,6 @@ import ChooseClubDropdown from "../components/choose-club-dropdown/ChooseClubDro
 import TextInput from "../components/text-input/TextInput.jsx";
 
 const CreateClubNameScreen = ({ textInputValue }) => {
-  // console.log("DATA", data);
   const [teamName, setTeamName] = useState("");
   const [selectedSport, setSelectedSport] = useState("");
   const [selectedClub, setSelectedClub] = useState("");
@@ -18,22 +17,19 @@ const CreateClubNameScreen = ({ textInputValue }) => {
   };
   const handleDropdownChangeClub = (value) => {
     setSelectedClub(value);
-
-    console.log("VALUE FROM HANDLE DROPDOWN CHANGE CLUB: ", value);
   };
   //
   const handleDropdownChangeSport = (value) => {
     setSelectedSport(value);
-
-    console.log("VALUE FROM HANDLE DROPDOWN CHANGE SPORT: ", value);
   };
 
   return (
-    <div className="invite">
+    <div className="createClub-container">
       {clubOptions.map((dropdown, index) => {
         return (
           <ChooseClubDropdown
             key={index}
+            value={selectedClub}
             options={
               dropdown.options
                 ? [
@@ -53,16 +49,12 @@ const CreateClubNameScreen = ({ textInputValue }) => {
         onChange={handleTeamNameChange}
       />
       <ChooseSportDropdown
+        value={selectedSport}
         options={sportOptions}
         onChange={handleDropdownChangeSport}
       />
       <TagMapping />
       <Button title="CREATE TEAM" />
-      <div>
-        <p>{selectedClub}</p>
-        <p>{selectedSport}</p>
-        <p>{teamName}</p>
-      </div>
     </div>
   );
 };

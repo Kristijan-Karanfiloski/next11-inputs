@@ -1,16 +1,17 @@
 import "./ChooseSportDropdown.css";
 
-const ChooseSportDropdown = ({ label, value, onChange, options, title }) => {
+const ChooseSportDropdown = ({ value, onChange, options }) => {
   return (
     <div>
       <div className="form-field">
-        {/*<label>{title}</label>*/}
         <select
           className="sport"
           value={value}
           onChange={(e) => onChange(e.target.value)}
         >
-          <option disabled={true}>{label}</option>
+          <option disabled={true} value="">
+            Choose Sport
+          </option>
           {options.map((option, idx) => (
             <option key={idx} value={option.value}>
               {option.label}
