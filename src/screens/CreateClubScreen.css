@@ -1,9 +1,8 @@
-.customer {
+.createClub-container {
     display: grid;
     place-content: center;
     gap: 3rem;
     align-items: center;
-    /*border: 1px solid red;*/
     padding: 2.85rem;
 }
 
