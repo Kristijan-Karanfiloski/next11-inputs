@@ -8,7 +8,7 @@ const CreateClubScreen = ({
   textInputValue,
 }) => {
   return (
-    <div className="createClub-container">
+    <div className='createClub-container '>
       <TextInput
         value={textInputValue}
         onChange={handleTextInputChange}

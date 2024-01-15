@@ -24,7 +24,7 @@ const CreateClubNameScreen = ({ textInputValue }) => {
   };
 
   return (
-    <div className="createClub-container">
+    <form className="createClub-container">
       {clubOptions.map((dropdown, index) => {
         return (
           <ChooseClubDropdown
@@ -55,7 +55,7 @@ const CreateClubNameScreen = ({ textInputValue }) => {
       />
       <TagMapping />
       <Button title="CREATE TEAM" />
-    </div>
+    </form>
   );
 };
 

@@ -20,7 +20,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  width: 330px;
+  width: 338px;
 }
 
 .middleSection {
@@ -60,6 +60,13 @@ input {
 }
 
 .add-newBtn {
+  border: none;
+  background: transparent;
+  color: #979595;
+  cursor: pointer;
+}
+
+.delete-inputDiv{
   border: none;
   background: transparent;
   color: #979595;

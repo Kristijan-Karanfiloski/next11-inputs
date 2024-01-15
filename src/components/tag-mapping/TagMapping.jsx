@@ -17,11 +17,15 @@ const InputDiv = () => (
 
 const TagMapping = () => {
   const [tagMappingOpen, setTagMappingOpen] = useState(true);
-  const [newInputDiv, setNewInputDiv] = useState(1);
+  const [newInputDiv, setNewInputDiv] = useState([]);
 
   const addNewInputDiv = () => {
-    setNewInputDiv((prevInput) => prevInput + 1);
+    setNewInputDiv((prevInput) => [...prevInput,1]);
   };
+
+  const handleDeleteInputDiv=()=>{
+      setNewInputDiv(current => current.filter((_, index) =>index !== 0));
+  }
 
   const handleOpenTagMapping = () => {
     setTagMappingOpen(isOpen=>!isOpen);
@@ -39,8 +43,8 @@ const TagMapping = () => {
         <div className="bottomContainer">
           <p>No Tags</p>
           <div className="middleSection">
-            {[...Array(newInputDiv)].map((_, index) => (
-              <InputDiv key={index} />
+            {newInputDiv.map((_, index) => (
+              <InputDiv key={index}  />
             ))}
           </div>
           <div className="main-text">
@@ -48,7 +52,7 @@ const TagMapping = () => {
               Add new
             </button>
             <p>Select file to add tags</p>
-            <p>Delete tags</p>
+            <p onClick={handleDeleteInputDiv} className='delete-inputDiv'>Delete tags</p>
           </div>
         </div>
       )}
