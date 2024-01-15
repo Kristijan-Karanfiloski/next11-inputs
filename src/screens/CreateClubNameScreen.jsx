@@ -29,7 +29,7 @@ const CreateClubNameScreen = ({ textInputValue }) => {
         return (
           <ChooseClubDropdown
             key={index}
-            value={selectedClub}
+            value={textInputValue}
             options={
               dropdown.options
                 ? [
