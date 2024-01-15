@@ -24,7 +24,7 @@ const TagMapping = () => {
   };
 
   const handleOpenTagMapping = () => {
-    setTagMappingOpen(!tagMappingOpen);
+    setTagMappingOpen(isOpen=>!isOpen);
   };
 
   return (
